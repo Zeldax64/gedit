@@ -307,14 +307,24 @@ gedit_exe = executable(
   install_rpath: pkglibdir,
 )
 
-test_sources = gedit_sources
-test_sources += './../test/test.c'
+test_sources = './../test/test.c'
+
+test_deps = [
+  '-pthread', 
+  '-lcheck_pic', 
+  '-pthread', 
+  '-lrt', 
+  '-lm', 
+  '-lsubunit',
+]
 
 test_exe = executable(
   'test_foo',
   test_sources,
   dependencies: gedit_deps,
+  link_args : test_deps,
   c_args: gedit_c_args
 )
 
-#test('test', test_exe)
+# Adding tests
+test('test', test_exe)
