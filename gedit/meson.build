@@ -327,4 +327,4 @@ test_exe = executable(
 )
 
 # Adding tests
-test('test', test_exe)
+test('test gedit-utils', test_exe)
