@@ -58,7 +58,7 @@ Além disso, também é preciso instalar o [sonar-scanner](https://docs.sonarqub
 4. Agora é preciso criar o conjunto de regras para poder ler os inputs gerados pelas ferramentas utilizadas. No menu superior vá em **Quality Profiles**.
 5. Com o plugin **sonar-cxx** devidamente instalado, clique na caixa de menuno correspondente a linha "Sonar way" da tabela do C++ e clique em "copy" para criar um novo conjunto de regras a partir do padrão.
 
-![](vv_readme/copy_profile.jpg)
+![](vv_readme/img/copy_profile.jpg)
 
 6. Clique em "Activate More"
 7. Do lado esquerdo, em Language, ative **C (Community)** e em **Repository** ative (clique) em Cppcheck e Clang-SA. Se eles não estiverem presentes, utiliza a opção Search. Em seguida, desmarque **Quality Profile**. Outras opções em Repository podem ser marcadas dependendo dos softwares utilizados para realizar as análises.
