@@ -200,7 +200,7 @@ END_TEST
 */
 
 START_TEST (test_gedit_utils_location_get_dirname_for_display) {
-	gchar *path1 = "/home/teste/Documents/gedit/test.c";
+	gchar *path1 = "/home/teste/Documents/gedit/Testando/test.c";
 	GFile *location1  = g_file_new_for_path(path1);
 	gchar *result1  = "/home/teste/Documents/gedit";
 	GFile *location2  = NULL;
@@ -208,6 +208,12 @@ START_TEST (test_gedit_utils_location_get_dirname_for_display) {
 	gchar *path3 = "/home/test.c";
 	GFile *location3  = g_file_new_for_path(path3);
 	gchar *result3  = "/home";
+	gchar *path4 = "/bin/test.c";
+	GFile *location4  = g_file_new_for_path(path4);
+	gchar *result4  = "/bin";
+	gchar *path5 = "test.c";
+	GFile *location5  = g_file_new_for_path(path5);
+	gchar *result5  = "test.c";
 
 	gchar *test_res;
 
@@ -222,6 +228,14 @@ START_TEST (test_gedit_utils_location_get_dirname_for_display) {
 	// Test 3
 	test_res = gedit_utils_location_get_dirname_for_display(location3);
 	ck_assert_str_eq(test_res, result3);
+
+	// Test 4
+	test_res = gedit_utils_location_get_dirname_for_display(location4);
+	ck_assert_str_eq(test_res, result4);
+
+	// Test 5
+	test_res = gedit_utils_location_get_dirname_for_display(location5);
+	ck_assert_str_eq(test_res, result5);
 
 }
 END_TEST
