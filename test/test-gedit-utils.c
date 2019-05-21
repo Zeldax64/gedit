@@ -84,8 +84,6 @@ START_TEST (test_gedit_utils_str_middle_truncate) {
 	gchar *str2   = "";
 	gchar *str3   = NULL;	
 
-	// delimiter = \342\200\246 (...)
-
 	gchar *test1_ex  = "Hallo Welt";
 	gchar *test2_ex  = "Hallo Welt";
 	gchar *test3_ex  = "Hallo Welt";
