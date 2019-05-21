@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-replace" xml:lang="sv">
+
+  <info>
+    <link type="guide" xref="index#gedit-working-with-files"/>
+    <link type="seealso" xref="gedit-search"/>
+    <desc>Ersätt textstycken i en fil.</desc>
+    <revision pkgversion="3.8" date="2013-02-24" status="review"/>
+    <revision pkgversion="3.10" date="2013-11-05" status="candidate"/>
+    <revision pkgversion="3.14" date="2014-11-28" status="review"/>
+    <revision pkgversion="3.24" date="2017-09-17" status="review"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jcampbell@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Daniel Neel</name>
+      <email>dneelyep@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Sindhu S</name>
+      <email>sindhus@live.in</email>
+    </credit>
+    <credit type="editor">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Shobha Tyagi</name>
+      <email>tyagishobha@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Young Li</name>
+      <email>li.young1618@gmail.com</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Nylander</mal:name>
+      <mal:email>po@danielnylander.se</mal:email>
+      <mal:years>2007, 2008, 2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Anders Jonsson</mal:name>
+      <mal:email>anders.jonsson@norsjovallen.se</mal:email>
+      <mal:years>2016, 2017</mal:years>
+    </mal:credit>
+  </info>
+
+  <title>Ersätt text</title>
+
+  <p>Att redigera text kan vara tidsödande. För att spara tid inkluderar <app>gedit</app> funktionen <app>Ersätt</app> som hjälper dig hitta och ersätta textstycken.</p>
+
+  <steps>
+    <title>Ersätt text i <app>gedit</app></title>
+    <item>
+      <p>Öppna verktyget <gui>Ersätt</gui> genom att klicka <guiseq><gui style="button">Menyknapp</gui><gui style="menuitem">Sök och ersätt…</gui></guiseq> eller trycka <keyseq><key>Ctrl</key><key>H</key></keyseq>.</p>
+    </item>
+    <item>
+      <p>Skriv in texten som du vill ersätta i fältet <gui>Sök</gui>.</p>
+    </item>
+    <item>
+      <p>Ange den nya ersättningstexten i fältet <gui>Ersätt med</gui>.</p>
+    </item>
+    <item>
+      <p>Då du har angivit den ursprungliga texten och ersättningstexten kan du lägga till extra parametrar till sökningen. Du kan också välja vad du vill ersätta:</p>
+      <list>
+        <item>
+          <p>För att ersätta <em>endast</em> nästa matchning, klicka på <gui>Ersätt</gui>.</p>
+        </item>
+        <item>
+          <p>För att ersätta <em>alla förekomster</em> av den sökta texten, klicka på <gui>Ersätt alla</gui>.</p>
+        </item>
+      </list>
+    </item>
+  </steps>
+
+  <note style="warning">
+    <p>Använd funktionen <gui>Ersätt alla</gui> försiktigt. <gui>Ersätt alla</gui> utförs på hela din textfil, och låter dig inte markera textstycken där funktionen kommer att utföras.</p>
+  </note>
+
+<section id="replace-options">
+  <title>Fler alternativ</title>
+
+  <p>Om du vill kan du lägga till extra parametrar till din sökning:</p>
+
+  <terms>
+    <item>
+      <title>Gör skillnad på skiftläge</title>
+      <p>Alternativet <em>Gör skillnad på skiftläge</em> låter dig ange huruvida du vill att dina sökningar ska vara skiftlägeskänsliga. Om detta alternativ är markerat kommer sökningar att vara skiftlägeskänsliga. I annat fall kommer sökningar inte att vara skiftlägeskänsliga.</p>
+    </item>
+    <item>
+      <title>Matcha endast hela ord</title>
+      <p>Använd detta alternativ för att söka efter ett specifikt ord utan att inkludera delar av andra ord. Om du till exempel sökte efter ordet ”and” med detta alternativ markerat så kommer ordet ”and” att ge en sökträff, men orden ”s<em>and</em>” och ”komm<em>and</em>o” skulle inte ge någon sökträff.</p>
+    </item>
+    <item>
+      <title>Sök baklänges</title>
+      <p>Detta kommando beter sig precis som kommandot Sök föregående. Kryssa i detta alternativ om du vill stega genom resultat från slutet till början.</p>
+    </item>
+    <item>
+      <title>Börja om från början</title>
+      <p>Då alternativet <app>Börja om från början</app> är aktiverat kommer <app>gedit</app> att starta om sök/ersätt-åtgärden i början av filen då den har nått slutet på filen. Detta säkerställer att din sök/ersätt-åtgärd utförs i hela din fil.</p>
+    </item>
+  </terms>
+
+</section>
+
+<section id="escape-sequences">
+  <title>Använda kontrollsekvenser</title>
+
+  <p>Du kan använda <em>kontrollsekvenser</em> för att söka efter nyrader, vagnreturer och tabbar.</p>
+
+  <terms>
+    <item>
+      <title>\n</title>
+      <p>Nyrad</p>
+    </item>
+    <item>
+      <title>\r</title>
+      <p>Vagnretur</p>
+    </item>
+    <item>
+      <title>\t</title>
+      <p>Tabb</p>
+    </item>
+  </terms>
+
+  <p>Om du faktiskt vill söka efter ett <output>\</output> (omvänt snedstreck) eller en av kontrollsekvenserna i texten så måste det omvända snedstrecket föregås av ett extra omvänt snedstreck. För att söka efter <input>\</input> behöver du till exempel mata in <input>\\</input> i sök- eller ersätt-fältet. Du kan söka efter kontrollsekvenser på samma sätt: för att söka efter eller ersätta med ett <input>\n</input>, använd inmatningstermen <input>\\n</input>.</p>
+
+</section>
+
+</page>

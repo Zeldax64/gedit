@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-plugins-doc-stats" xml:lang="sv">
+
+<info>
+  <link type="guide" xref="gedit-plugin-guide#gedit-default-plugins"/>
+  <revision pkgversion="3.8" date="2013-02-24" status="review"/>
+  <credit type="author">
+    <name>Daniel Neel</name>
+    <email>dneelyep@gmail.com</email>
+  </credit>
+  <credit type="author">
+    <name>Jim Campbell</name>
+    <email>jcampbell@gnome.org</email>
+  </credit>
+  <desc>Visa dokumentstatistik.</desc>
+
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Nylander</mal:name>
+      <mal:email>po@danielnylander.se</mal:email>
+      <mal:years>2007, 2008, 2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Anders Jonsson</mal:name>
+      <mal:email>anders.jonsson@norsjovallen.se</mal:email>
+      <mal:years>2016, 2017</mal:years>
+    </mal:credit>
+  </info>
+
+<title>Dokumentstatistik</title>
+
+  <p>Insticksmodulen <em>Dokumentstatistik</em> visar dig diverse statistik om ditt aktuella dokument. För att aktivera denna insticksmodul, välj <guiseq><gui style="menu">gedit</gui><gui style="menuitem">Inställningar</gui> <gui>Insticksmoduler</gui><gui>Dokumentstatistik</gui></guiseq>.</p>
+
+<section id="using-doc-stats">
+  <title>Använda dokumentstatistik</title>
+
+  <p>Då insticksmodulen är aktiverad kan du använda den genom att välja <guiseq><gui>Verktyg</gui> <gui>Dokumentstatistik</gui></guiseq>. Ett fönster kommer att visa statistiken för ditt dokument, detta inkluderar antalet ord, rader, tecken, blankstegsskilda tecken och filstorleken i byte.</p>
+
+  <p>Du kan också använda <em>Dokumentstatistik</em> för att visa dig information om bara en del av ditt dokument. För att göra detta, använd muspekaren för att markera textstycket som du vill undersöka, och välj sedan <guiseq><gui>Verktyg</gui><gui>Dokumentstatistik</gui></guiseq>. <app>Gedit</app> kommer visa information både för hela ditt dokument och för textstycket som du markerat.</p>
+</section>
+
+</page>

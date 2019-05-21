@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-spellcheck" xml:lang="sv">
+  
+  <info>
+    <link type="guide" xref="gedit-plugin-guide#gedit-default-plugins"/> 
+    <desc>Leta efter stavfel i dina filer.</desc>
+    <revision pkgversion="3.8" date="2013-02-24" status="review"/>
+    <revision pkgversion="3.8" date="2013-03-21" status="review"/>
+
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jcampbell@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Baptiste Mille-Mathias</name>
+      <email>baptistem@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Sindhu S</name>
+      <email>sindhus@live.in</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Nylander</mal:name>
+      <mal:email>po@danielnylander.se</mal:email>
+      <mal:years>2007, 2008, 2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Anders Jonsson</mal:name>
+      <mal:email>anders.jonsson@norsjovallen.se</mal:email>
+      <mal:years>2016, 2017</mal:years>
+    </mal:credit>
+  </info>
+  
+  <title>Stavningskontrollera ditt dokument</title>
+  <section id="enable-spell-check">
+    <title>Aktivera stavningskontrollen</title>
+    <p>Stavningskontrollfunktionen tillhandahålls som en insticksmodul i <app>gedit</app> som kan aktiveras efter behov. För att aktivera insticksmodulen:</p>
+
+    <steps>
+      <item>
+        <p>Välj <guiseq><gui style="menu">gedit</gui> <gui style="menuitem">Inställningar</gui> <gui style="tab">Insticksmoduler</gui></guiseq>.</p>
+      </item>
+      <item>
+        <p>Välj <gui style="menuitem">Stavningskontroll</gui> för att aktivera insticksmodulen.</p>
+      </item>
+    </steps>
+
+  </section>
+
+  <section id="spell-check">
+    <title>Stavningskontrollera ditt dokument</title>
+
+    <p>För att söka felstavade ord i ditt dokument:</p>
+
+    <steps>
+      <item>
+        <p>Välj <guiseq><gui style="menu">Verktyg</gui> <gui style="menuitem">Kontrollera stavning</gui></guiseq>.</p>
+      </item>
+    </steps>
+
+    <note style="tip">
+      <p>För att <app>gedit</app> automatiskt ska färgmarkera felstavade ord i ditt dokument under tiden du skriver, välj <guiseq><gui style="menu">Verktyg</gui><gui style="menuitem">Färgmarkera felstavade ord</gui></guiseq>.</p>
+    </note>
+  </section>
+
+  <section id="use-spell-check">
+    <title>Använda stavningskontroll</title>
+
+    <p>Du kan välja den rätta ersättningen för felstavade ord med dialogrutan Kontrollera stavning. Det felstavade ordet som kontrolleras av stavningskontrollen visas i fetstil intill <gui>Felstavat ord:</gui>. Du kan välja bland följande rättningsåtgärder:</p>
+
+    <list>
+      <item>
+        <p><gui style="input">Ändra till:</gui> låter dig mata in ett ord och använda <gui style="button">Kontrollera ord</gui> för att kontrollera att stavningen är rätt.</p>
+      </item>
+      <item>
+        <p><gui style="menu">Förslag:</gui> listar de tillgängliga ersättningarna för ordet.</p>
+      </item>
+      <item>
+        <p><gui style="button">Ignorera</gui> låter dig hoppa över stavningskontroll för <em>en</em> förekomst av aktuellt ord.</p>
+      </item>
+      <item>
+        <p><gui style="button">Ignorera alla</gui> låter dig hoppa över stavningskontroll för <em>alla</em> förekomster av aktuellt ord.</p>
+      </item>
+      <item>
+        <p><gui style="button">Ändra</gui> ersätter det felstavade eller ej igenkända ordet med <em>en</em> vald ersättning från listan <gui style="menuitem">Förslag:</gui>.</p>
+      </item>
+      <item>
+        <p><gui style="button">Ändra alla</gui> ersätter <em>alla</em> felstavade eller ej igenkända ord med den valda ersättningen från listan <gui style="menuitem">Förslag:</gui>.</p>
+      </item>
+      <item>
+        <p><gui style="button">Lägg till ord</gui> låter dig lägga till det aktuella ordet till <app>gedit</app>s <gui>Användarordbok</gui>. Att lägga till anpassade ord till <gui>Användarordboken</gui> kommer låta <app>gedit</app> känna igen ordet i dokument och kommer därmed inte att markeras som ett felstavat ord.</p>
+      </item>
+    </list>
+
+  </section>
+
+  <section id="define-spell-check-language">
+    <title>Definiera språket att använda för stavningskontroll</title>
+    <p>Som standard kommer <app>gedit</app> att använda ditt aktuella språk för att stavningskontrollera ditt dokument. Om du behöver använda ett annat språk, välj <guiseq><gui style="menu">Verktyg</gui><gui style="menuitem">Ställ in språk…</gui></guiseq> och välj sedan språket som du vill använda.</p>
+  </section>
+
+  <section id="dict">
+    <title>Ordböcker</title>
+
+    <p><app>gedit</app> använder <link href="http://www.abisource.com/projects/enchant/">Enchant</link>, ett litet systemverktyg, för stavningskontroll. Enchant kan använda flera olika ordböcker för att kontrollera din stavning. Två sådana ordboksbakändar är <em>Hunspell</em> och <em>Aspell</em>.</p>
+
+    <p>Om språket du vill använda inte är tillgängligt i <app>gedit</app>, använd din dators programvaruinstallerare eller pakethanterare för att installera ordboksbakänden som du vill ha.</p>
+  </section>
+</page>

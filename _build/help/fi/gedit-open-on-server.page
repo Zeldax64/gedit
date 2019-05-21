@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" style="task" id="gedit-open-on-server" xml:lang="fi">
+
+  <info>
+    <link type="guide" xref="gedit-files-basic" group="sixth"/>
+    <desc>Access files that are stored on a different computer.</desc>
+    <revision pkgversion="3.24" date="2017-09-14" status="review"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jcampbell@gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>sampo555</mal:name>
+      <mal:email>sampo_75 [at] windowslive [dot] com</mal:email>
+      <mal:years>2012.</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Valto Wirkola</mal:name>
+      <mal:email>valto [dot] wirkola [at] yahoo [dot] com</mal:email>
+      <mal:years>2008, 2010</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Tommi Vainikainen</mal:name>
+      <mal:email>thv [at] iki [dot] fi</mal:email>
+      <mal:years>2006.</mal:years>
+    </mal:credit>
+  </info>
+
+  <title>Palvelimella sijaitsevan tiedoston avaaminen</title>
+
+  <p>Ennen kuin <app>gedit</app> voi avata tiedostoja verkkopalvelimelta, <app>gedit</app> tarvitsee teknisiä tietoja kyseisestä palvelimesta. <app>gedit</app> vaatii ainakin palvelimen IP- tai verkko-osoitteen ja mahdollisesti myös palvelimen tyypin (esim. HTTP, FTP, jne.).</p>
+
+  <p>Jotkut palvelimet rajoittavat palvelimella olevien tiedostojen muokkaamista. Tiedoston voi esimerkiksi avata palvelimelta, mutta muutokset täytyy tallentaa paikallisesti omalle tietokoneelle.</p>
+
+  <p>Tiedostojen avaaminen verkkopalvelimelta <app>geditillä</app> onnistuu seuraavasti:</p>
+
+    <steps>
+      <item><p>In the header bar, click on <gui>Open</gui>.</p></item>
+      <item><p>Click <gui>Other Documents…</gui>.</p></item>
+      <item><p>Press <keyseq><key>Ctrl</key><key>L</key></keyseq> in the
+      <gui>Open</gui> dialog.</p></item>
+      <item><p>Anna palvelimen IP- tai verkko-osoite.</p></item>
+      <item><p>Etsi ja valitse haluamasi tiedosto.</p></item>
+      <item><p>Use the Character Encoding drop-down list to select the
+      appropriate character coding.</p></item>
+      <item><p>Napsauta <gui>Avaa</gui>.</p></item>
+    </steps>
+
+  <p>Tuettuja URI-tyyppejä ovat mm. http:, ftp:, file:, ja kaikki <app>gvfs</app>:n tukemat muodot.</p>
+
+  <note>
+    <p>Osa URI-tyypeistä avataan "vain-luku"-tilassa, ja kaikki muutokset täytyy tallentaa muualle. HTTP sallii vain tiedostojen lukemisen. FTP:llä avatut tiedostot ovat "vain-luku"-tilassa, koska kaikki FTP-palvelimet eivät osaa tallentaa muutoksia.</p>
+  </note>
+
+</page>

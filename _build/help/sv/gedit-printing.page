@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="gedit-printing" xml:lang="sv">
+
+  <info>
+    <link type="guide" xref="index#gedit-printing-guide"/>
+    <desc>Skriv ut filerna som du skapar med gedit.</desc>
+    <revision pkgversion="3.8" date="2013-02-24" status="review"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jcampbell@gnome.org</email>
+    </credit>
+    <credit type="author">
+      <name>Sindhu S</name>
+      <email>sindhus@live.in</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Nylander</mal:name>
+      <mal:email>po@danielnylander.se</mal:email>
+      <mal:years>2007, 2008, 2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Anders Jonsson</mal:name>
+      <mal:email>anders.jonsson@norsjovallen.se</mal:email>
+      <mal:years>2016, 2017</mal:years>
+    </mal:credit>
+  </info>
+
+  <title>Skriva ut dokument</title>
+
+    <note style="important">
+      <p>Att skriva ut med <app>gedit</app> kräver att du har anslutit och konfigurerat din skrivare. Om du inte har gjort detta, konsultera <link href="help:gnome-help/printing">utskriftshjälpen för GNOME</link>.</p>
+    </note>
+  
+  <p><app>gedit</app> låter dig både skriva ut till en fil och på papper.</p>
+
+  <section id="print-preview">
+    <title>Förhandsvisa utskrift</title>
+
+  <p>Före du skriver ut ditt dokument kan du förhandsvisa hur det utskrivna dokumentet kommer se ut genom att använda <gui>Förhandsvisa</gui>. För att förhandsvisa dokumentet:</p>
+
+  <steps>
+    <item>
+      <p>Välj <guiseq><gui style="menu">Arkiv</gui> <gui style="menuitem">Förhandsvisa utskrift</gui></guiseq>. Alternativt kan du trycka <keyseq><key>Skift</key><key>Ctrl</key> <key>P</key></keyseq>.</p>
+    </item>
+  </steps>
+
+  <p>En förhandsgranskning av ditt dokument kommer att öppnas i samma flik som filen. Du kan bläddra i denna förhandsgranskning med hjälp av navigeringsknappar och verktyg i verktygsfältet högst upp i dokumentförhandsgranskningsfliken. För att stänga och återvända till dokumentet klicka på <gui style="button">Stäng förhandsvisning</gui>.</p>
+
+  </section>
+
+  <section id="printing-to-paper">
+    <title>Utskrift på papper</title>
+
+  <p>Du kan skriva ut dina dokument på papper med en lokal skrivare eller en fjärrskrivare. För att skriva ut en fil:</p>
+
+  <steps>
+    <item>
+      <p>Välj <guiseq><gui style="menu">Arkiv</gui> <gui style="menuitem">Skriv ut</gui> <gui style="tab">Allmänt</gui></guiseq>.</p>
+    </item>
+    <item>
+      <p>Välj den önskade skrivaren från listan av tillgängliga skrivare.</p>
+    </item>
+    <item>
+      <p>Du kan förhandsgranska filen med <gui style="button">Förhandsvisa</gui>, och då du är nöjd med inställningarna kan du klicka <gui style="button">Skriv ut</gui> för att sända filen till skrivaren.</p>
+    </item>
+  </steps>
+
+  <p>Dessutom kan du från fliken <gui style="tab">Sidinställning</gui> välja alternativ för <gui style="group">Layout</gui> och <gui style="group">Papper</gui>. Eftersom dessa inställningar är tillgängliga i diverse <app>GNOME</app>-program, se hjälpsidan för <link href="help:gnome-help/printing#paper">alternativ för layout och papper</link>.</p>
+
+  </section>
+
+  <section id="printing-order-select">
+    <title>Skriv ut flera exemplar och inom angivna intervall</title>
+
+    <p>Du kan ställa in alternativen <gui style="group">Intervall</gui> och <gui style="group">Kopior</gui> för att hjälpa dig:</p>
+
+  </section>
+
+  <section id="printing-to-file">
+    <title>Utskrift till fil</title>
+
+  <p>Du kan också använda <app>gedit</app> för att skriva ut till en fil. För att skriva ut ditt dokument till en fil med ett annat format:</p>
+
+  <steps>
+    <item>
+      <p>Välj <guiseq><gui style="menu">Arkiv</gui> <gui style="menuitem">Skriv ut</gui> <gui style="menuitem">Skriv ut till fil</gui></guiseq>.</p>
+    </item>
+    <item>
+      <p>Utskrift är aktiverad för följande filformat, du kan välja bland:</p>
+      <list>
+        <item>
+          <p>Portable Document Format (.pdf)</p>
+        </item>
+        <item>
+          <p>Postscript (.ps)</p>
+        </item>
+        <item>
+          <p>Scalable Vector Graphic (.svg)</p>
+        </item>
+        </list>
+    </item>
+    <item>
+      <p>För att skriva ut dokumentet till en fil, klicka på <gui style="button">Skriv ut</gui>.</p>
+    </item>
+  </steps>
+
+  </section>
+
+</page>

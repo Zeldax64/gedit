@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" type="topic" style="task" id="gedit-tabs-moving" xml:lang="sv">
+
+  <info>
+    <link type="guide" xref="index#gedit-working-with-files" group="last"/>
+    <link type="seealso" xref="gedit-tabs"/>
+    <link type="seealso" xref="gedit-tab-groups"/>
+    <desc>Ändra positionen för en flik i geditfönstret.</desc>
+    <revision pkgversion="3.8" date="2013-02-24" status="review"/>
+    <credit type="author">
+      <name>Jim Campbell</name>
+      <email>jcampbell@gnome.org</email>
+    </credit>
+    <credit type="collaborator">
+      <name>Daniel Neel</name>
+      <email>dneelyep@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Sindhu S</name>
+      <email>sindhus@live.in</email>
+    </credit>
+    <credit type="editor">
+      <name>Radina Matic</name>
+      <email its:translate="no">radina.matic@gmail.com</email>
+      <years>2013</years>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Daniel Nylander</mal:name>
+      <mal:email>po@danielnylander.se</mal:email>
+      <mal:years>2007, 2008, 2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Anders Jonsson</mal:name>
+      <mal:email>anders.jonsson@norsjovallen.se</mal:email>
+      <mal:years>2016, 2017</mal:years>
+    </mal:credit>
+  </info>
+
+  <title>Flytta och ändra ordning på flikar</title>
+  <p>Flikar i <app>gedit</app> kan flyttas, vilket gör det enklare att arbeta med dina filer. Ordningen för flikar kan ändras i samma fönster, flyttas utanför <app>gedit</app> (vilket skapar ett nytt <app>gedit</app>-fönster), och flyttas från ett fönster till ett annat.</p>
+
+  <section id="tabs-change-order">
+    <title>Ändra ordningen på flikarna i geditfönstret</title>
+
+    <p>För att ändra ordningen på flikar i ett fönster:</p>
+
+    <steps>
+      <item>
+        <p>Klicka och håll ner musknappen på fliken.</p>
+      </item>
+      <item>
+        <p>Dra fliken till den önskade positionen bland de andra flikarna.</p>
+      </item>
+      <item>
+        <p>Släpp musknappen.</p>
+      </item>
+    </steps>
+
+    <p>Fliken kommer placeras på positionen närmast där du släppte fliken, omedelbart intill andra öppna flikar.</p>
+
+  </section>
+
+  <section id="tabs-moving-new-window">
+    <title>Flytta en flik, skapa ett nytt geditfönster</title>
+    <p>För att skapa ett nytt fönster från en befintlig flik:</p>
+
+    <steps>
+      <item>
+        <p>Klicka och håll ner musknappen på fliken.</p>
+      </item>
+      <item>
+        <p>Dra fliken ut ur <app>gedit</app>-fönstret.</p>
+      </item>
+      <item>
+        <p>Släpp musknappen.</p>
+      </item>
+    </steps>
+
+    <note style="tip">
+      <p>För att flytta en flik till ett nytt fönster då <app>gedit</app> är maximerat, dra fliken till systemraden högst upp på skärmen.</p>
+    </note>
+  </section>
+
+  <section id="tabs-moving-other-window">
+    <title>Flytta en flik till ett annat geditfönster</title>
+
+    <p>Om du vill flytta en flik från ett fönster till ett annat:</p>
+
+    <steps>
+      <item>
+        <p>Klicka och håll ner musknappen på fliken.</p>
+      </item>
+      <item>
+        <p>Dra fliken till det nya fönstret.</p>
+      </item>
+      <item>
+        <p>Placera den bredvid andra flikar i det nya fönstret.</p>
+      </item>
+      <item>
+        <p>Släpp musknappen.</p>
+      </item>
+    </steps>
+    
+
+    <note style="tip">
+      <p>Du kan finna det lättare att flytta en flik från ett fönster till ett annat genom att dra fliken till övre vänstra hörnet <gui>Aktiviteter</gui> i <gui>GNOME Shell</gui>. Detta kommer att visa alla öppna <app>gedit</app>-fönster. Du kan sedan släppa fliken på det önskade <app>gedit</app>-fönstret.</p>
+    </note>
+
+    <p>Se tabellen <link xref="gedit-shortcut-keys">flikrelaterade kortkommandon</link> för att göra det lättare att hantera dina flikar.</p>
+
+  </section>
+
+</page>

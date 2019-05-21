@@ -18,6 +18,8 @@
 */
 START_TEST (test_gedit_utils_str_end_truncate) {
 	gchar *str   = "Hallo Welt";
+	gchar *str2   = "";
+	gchar *str3   = NULL;
 
 	// delimiter = \342\200\246 (...)
 	gchar *test1_ex = "Hallo\342\200\246";
@@ -25,6 +27,8 @@ START_TEST (test_gedit_utils_str_end_truncate) {
 	gchar *test3_ex = "Hallo Welt";
 	gchar *test4_ex = "Hallo Welt";
 	gchar *test5_ex = "Ha\342\200\246";
+	gchar *test6_ex = "";
+	gchar *test7_ex = NULL;
 
 	gchar *test_res;
 
@@ -51,6 +55,16 @@ START_TEST (test_gedit_utils_str_end_truncate) {
 	// A partir do terceiro caractere é possível truncar
 	test_res = gedit_utils_str_end_truncate(str, 3);
 	ck_assert_str_eq(test5_ex, test_res);
+
+	// Test 6
+	// Truncar uma string vazia não é possível
+	test_res = gedit_utils_str_end_truncate(str2, 3);
+	ck_assert_str_eq(test6_ex, test_res);
+
+	// Test 7
+	// Ao receber NULL, retorna NULL
+	test_res = gedit_utils_str_end_truncate(str3, 3);
+	ck_assert_ptr_eq(test7_ex, test_res);
 	
 }
 END_TEST
@@ -67,6 +81,8 @@ END_TEST
 
 START_TEST (test_gedit_utils_str_middle_truncate) {
 	gchar *str   = "Hallo Welt";
+	gchar *str2   = "";
+	gchar *str3   = NULL;	
 
 	// delimiter = \342\200\246 (...)
 
@@ -83,6 +99,8 @@ START_TEST (test_gedit_utils_str_middle_truncate) {
 	gchar *test11_ex = "Hallo Welt";
 	gchar *test12_ex = "Hallo Welt";
 	gchar *test13_ex = "Hallo Welt";
+	gchar *test14_ex = "";
+	gchar *test15_ex = NULL;
 
 	gchar *test_res;
 
@@ -125,11 +143,17 @@ START_TEST (test_gedit_utils_str_middle_truncate) {
 	
 	test_res = gedit_utils_str_middle_truncate(str,12);
 	ck_assert_str_eq(test13_ex, test_res);
+
+	test_res = gedit_utils_str_middle_truncate(str2,3);
+	ck_assert_str_eq(test14_ex, test_res);
+
+	test_res = gedit_utils_str_middle_truncate(str3,3);
+	ck_assert_ptr_eq(test15_ex, test_res);
 }
 END_TEST
 
 /**
- * Teste para a função gedit_utils_make_valid_utf8() (em andamento)
+ * Teste para a função gedit_utils_make_valid_utf8()
  *
  * Converte um conjunto de caracteres para uma string
  * do tipo UTF-8 valida
@@ -180,7 +204,7 @@ END_TEST
 START_TEST (test_gedit_utils_location_get_dirname_for_display) {
 	gchar *path1 = "/home/teste/Documents/gedit/test.c";
 	GFile *location1  = g_file_new_for_path(path1);
-	gchar *result1  = "/home/teste/Documents/gedit";
+	gchar *result1  = "~/Documents/gedit";
 	GFile *location2  = NULL;
 	gchar *result2  = NULL;
 	gchar *path3 = "/home/test.c";
@@ -217,7 +241,11 @@ END_TEST
 START_TEST (test_gedit_utils_is_valid_location) {
 	gchar *path1 = "/home/teste/Documents/gedit/test.c";
 	GFile *location1  = g_file_new_for_path(path1);
-	GFile *location2  = NULL;
+	gchar *path2 = "/";	
+	GFile *location2  = g_file_new_for_path(path2);
+	gchar *path3 = "";	
+	GFile *location3  = g_file_new_for_path(path3);
+	GFile *location4  = NULL;
 
 	gboolean test_res;
 
@@ -227,9 +255,15 @@ START_TEST (test_gedit_utils_is_valid_location) {
 
 	// Test 2
 	test_res = gedit_utils_is_valid_location(location2);
+	ck_assert(test_res);
+
+	// Test 3
+	test_res = gedit_utils_is_valid_location(location3);
+	ck_assert(test_res);
+
+	// Test 4
+	test_res = gedit_utils_is_valid_location(location4);
 	ck_assert(!test_res);
-
-
 }
 END_TEST
 
