@@ -5,7 +5,7 @@
 #include <check.h>
 
 #include <stdio.h>
-#include "gedit/gedit-utils.h"
+#include "gedit/gedit-utils.c"
 
 /**
  * Teste para a função gedit_utils_str_end_truncate()
@@ -202,7 +202,7 @@ END_TEST
 START_TEST (test_gedit_utils_location_get_dirname_for_display) {
 	gchar *path1 = "/home/teste/Documents/gedit/test.c";
 	GFile *location1  = g_file_new_for_path(path1);
-	gchar *result1  = "~/Documents/gedit";
+	gchar *result1  = "/home/teste/Documents/gedit";
 	GFile *location2  = NULL;
 	gchar *result2  = NULL;
 	gchar *path3 = "/home/test.c";
@@ -213,7 +213,6 @@ START_TEST (test_gedit_utils_location_get_dirname_for_display) {
 
 	// Test 1
 	test_res = gedit_utils_location_get_dirname_for_display(location1);
-	printf("test_gedit_utils_location_get_dirname_for_display: %s\n", test_res);
 	ck_assert_str_eq(result1, test_res);
 
 	// Test 2
@@ -265,6 +264,36 @@ START_TEST (test_gedit_utils_is_valid_location) {
 }
 END_TEST
 
+/**
+* Teste para a função test_is_valid_scheme_character()
+*
+* A função retorna TRUE quando o caractere é alphanumeric ou '+', 
+* '-' e '.' na tabela ASCII. Para o teste foi utilizado um loop que
+* itera sobre os 128 símbolos da tabela ASCII.
+*/
+START_TEST (test_is_valid_scheme_character) {
+	unsigned char c = 0;
+	gboolean res;
+	res = is_valid_scheme_character(c);
+	printf("--- RES: %d\n", res);
+
+	for(c = 0; c < 128; c++) {
+		res = is_valid_scheme_character(c);
+		if ((c >= 48 && c <= 57)  ||  // Númerico
+			(c >= 65 && c <= 90)  ||  // Letra maiúscula
+			(c >= 97 && c <= 122) ||	// Letra minúscula
+			c == '+' || 
+			c == '-' ||
+			c == '.') { 	 
+			ck_assert_int_eq(res, TRUE);	
+		}	
+		else {
+			ck_assert_int_eq(res, FALSE);
+		}
+	}
+}
+END_TEST
+
 Suite * test_suite(void) {
 	Suite *s;
 	TCase *tc_core;
@@ -279,6 +308,7 @@ Suite * test_suite(void) {
 	tcase_add_test(tc_core, test_gedit_utils_make_valid_utf8);
 	tcase_add_test(tc_core, test_gedit_utils_location_get_dirname_for_display);
 	tcase_add_test(tc_core, test_gedit_utils_is_valid_location);
+	tcase_add_test(tc_core, test_is_valid_scheme_character);
 	suite_add_tcase(s, tc_core);
 
 	return s;
