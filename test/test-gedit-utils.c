@@ -5,7 +5,7 @@
 #include <check.h>
 
 #include <stdio.h>
-#include "gedit-utils.h"
+#include "gedit/gedit-utils.h"
 
 /**
  * Teste para a função gedit_utils_str_end_truncate()
