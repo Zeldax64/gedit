@@ -285,8 +285,8 @@ START_TEST (test_is_valid_scheme_character) {
 
 	for(c = 0; c < 128; c++) {
 		res = is_valid_scheme_character(c);
-		if ((c >= 48 && c <= 57)  ||  // Númerico
-			(c >= 65 && c <= 90)  ||  // Letra maiúscula
+		if ((c >= 48 && c <= 57)  ||	// Númerico
+			(c >= 65 && c <= 90)  ||	// Letra maiúscula
 			(c >= 97 && c <= 122) ||	// Letra minúscula
 			c == '+' || 
 			c == '-' ||
@@ -297,24 +297,6 @@ START_TEST (test_is_valid_scheme_character) {
 			ck_assert_int_eq(res, FALSE);
 		}
 	}
-}
-END_TEST
-
-/**
-* Teste para a função has_valid_scheme()
-*
-*/
-START_TEST (test_has_valid_scheme) {
-/*
-	char* path;
-	gboolean res;
-	// Teste 1
-	path = "aba:/ca/t:e/a.c";
-	res = has_valid_scheme(path);
-	printf("----> res %d\n", res);
-*/
-	// g_filename_to_uri()
-	// https://developer.gnome.org/glib/stable/glib-URI-Functions.html#g-uri-parse-scheme
 }
 END_TEST
 

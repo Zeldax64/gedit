@@ -113,10 +113,6 @@ START_TEST (test_is_unstable) {
 }
 END_TEST
 
-START_TEST (test_parse_file_version) {
-}
-END_TEST
-
 Suite * test_suite(void) {
 	Suite *s;
 	TCase *tc_core;

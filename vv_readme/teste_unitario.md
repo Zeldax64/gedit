@@ -2,16 +2,11 @@
 
 O objetivo deste texto é ilustrar um passo a passo de como efetuar o teste unitário na aplicação gedit. Testes unitários são uma boa forma de garantir o funcionamento de funções e verificar se o programa foi quebrado ou não por meio de modificações no futuro.
 
-Trabalhar com esse tipo de teste na linguagem C é mais complicado do que com linguagens de mais alto nível pois o framework desenvolvido para testar precisa lidar com questões específicas da linguagem como:
-* Isolamento de memória;
-* Listar coisas aqui
-[Fazer lista]
-
 ## Como realizar testes unitários em C?
 
 Para realizar o teste unitário é preciso compilar a aplicação e gerar um programa executável que será, de fato, o teste. A diferença de compilação entre o executável da aplicação e o do teste reside na mudança da função main(). No executável da aplicação a main() é responsável por executar o programa e no do teste a main() será utilizada para chamar a rotina de testes. Portanto, tendo o projeto compilável o que é necessário para criar a suite de testes é uma main() que use algum framework de teste unitário para C.
 
-Outra abordagem de compilar os testes em C é criar uma static library do programa a ser testado e linkar estaticamente com o programa de teste durante sua compilação. Esta abordagem é comumente vista em tutoriais pela internet e costuma ser usada. Ela tem a vantagem de a aplicação, uma vez compilada e gerada a static library, possa ser usada para a criação de diferentes testes.
+Outra abordagem de compilar os testes em C é criar uma static library do programa a ser testado e linkar estaticamente com o programa de teste durante sua compilação. Esta abordagem é comumente vista em tutoriais pela internet e costuma ser mais usada. Ela tem a vantagem de a aplicação, uma vez compilada e gerada a static library, possa ser usada para a criação de diferentes testes.
 
 ## Tutorial
 
