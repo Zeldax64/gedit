@@ -88,8 +88,8 @@ END_TEST
 * Teste para a função is_unstable()
 * 
 * Dada uma string contendo um número de versão, verifica se a versão é
-* estável ou não. Para ser uma versão estável é necessário que o micro,
-* valor correspondente ao campo do meio, seja ímpar.
+* instável ou não. Para ser uma versão instável é necessário que o minor,
+* valor correspondente ao campo do meio de um valor de versão, seja ímpar.
 */
 
 START_TEST (test_is_unstable) {
