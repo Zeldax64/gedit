@@ -190,7 +190,7 @@ START_TEST (test_gedit_utils_make_valid_utf8) {
 END_TEST
 
 /**
- * Teste para a função gedit_utils_location_get_dirname_for_display() (em andamento)
+ * Teste para a função gedit_utils_location_get_dirname_for_display()
  *
  * Retorna o nome de diretório de um path 
  * de arquivo. Não leva em conta o diretório home 
@@ -211,9 +211,6 @@ START_TEST (test_gedit_utils_location_get_dirname_for_display) {
 	gchar *path4 = "/bin/test.c";
 	GFile *location4  = g_file_new_for_path(path4);
 	gchar *result4  = "/bin";
-	gchar *path5 = "test.c";
-	GFile *location5  = g_file_new_for_path(path5);
-	gchar *result5  = "test.c";
 
 	gchar *test_res;
 
@@ -233,15 +230,12 @@ START_TEST (test_gedit_utils_location_get_dirname_for_display) {
 	test_res = gedit_utils_location_get_dirname_for_display(location4);
 	ck_assert_str_eq(test_res, result4);
 
-	// Test 5
-	test_res = gedit_utils_location_get_dirname_for_display(location5);
-	ck_assert_str_eq(test_res, result5);
 
 }
 END_TEST
 
 /**
- * Teste para a função gedit_utils_is_valid_location() (em andamento)
+ * Teste para a função gedit_utils_is_valid_location()
  *
  * Verifica se um determinado path é
  * válido, isso é, se ele está no padrão
